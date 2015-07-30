@@ -7,7 +7,7 @@ feature 'User views index page' do
                          author: 'Dr. Seuss',
                          fiction: true,
                          mystery: false,
-                         date_finished: 'May 2, 2011')
+                         completed: 'May 2, 2011')
     visit '/'
 
     expect(page).to have_content "Green Eggs and Ham"
