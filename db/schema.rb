@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150730163134) do
     t.boolean  "fiction",    default: true,  null: false
     t.boolean  "mystery",    default: false, null: false
     t.datetime "completed",                  null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

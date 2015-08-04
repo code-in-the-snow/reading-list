@@ -1,0 +1,12 @@
+.main-container {
+  text-align: center;
+  }
+
+  .left, .middle, .right {
+  width: 30%;
+  float: left;
+}
+
+ li {
+   list-style: none;
+ }

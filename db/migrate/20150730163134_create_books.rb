@@ -7,7 +7,7 @@ class CreateBooks < ActiveRecord::Migration
       t.boolean :mystery, default: false, null: false
       t.datetime :completed, null: false
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
