@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('#book-form').hide();
   $.ajax({
     type: "GET",
     url: "/books.json",
@@ -10,10 +11,10 @@ $(document).ready(function() {
       var otherFiction = $('.other-fiction');
 
       books.forEach(function(book) {
-        var text = "<li>" + book.text + "</li>";
+        var text = "<li>" + book.title + "</li>";
         if (book.fiction === true && book.mystery === true) {
           mysteryFiction.append(text);
-        } else if (book.fiction === true && book.mystery ==== false) {
+        } else if (book.fiction === true && book.mystery === false) {
           otherFiction.append(text);
         } else {
           nonFiction.append(text);
@@ -21,30 +22,57 @@ $(document).ready(function() {
       });
     }
   });
+
+  $("#get-form").click(function(){
+   $("#book-form").slideDown(400);
+   $("#get-form").hide();
+  });
+
+
+  $("#new-book-button").click(function(e) {
+    e.preventDefault();
+
+    $("#book-form").hide();
+    $("#get-form").show();
+
+    var newTitle = $('#title-text-field').val();
+    var newAuthor = $('#author-text-field').val();
+    var newDate = $('#title-text-field').val();
+    var mystery, fiction;
+     if ($("#mystery").checked == true) {
+       mystery = true;
+     }
+     if ($("#nonfiction").checked == true) {
+       fiction = false;
+     }
+
+    var nonFiction = $('.nonfiction');
+    var mysteryFiction = $('.mystery-fiction');
+    var otherFiction = $('.other-fiction');
+
+    $.ajax({
+      type: "POST",
+      url: "/books",
+      data: { title: newTitle,
+              author: newAuthor,
+              fiction: fiction,
+              mystery: mystery,
+              completed: newDate
+            },
+      dataType: "json",
+      success: function(book) {
+        var text = "<li>" + book.title + "</li>";
+        if (book.fiction === true && book.mystery === true) {
+          mysteryFiction.append(text);
+        } else if (book.fiction === true && book.mystery === false) {
+          otherFiction.append(text);
+        } else {
+          nonFiction.append(text);
+        }
+      },
+      ereror: function() {
+        alert("Oops, something went wrong?!?");
+      }
+    });
+  });
 });
-
-
-
-
-//
-//       tasks.forEach(function(task) {
-//         var text = "<li>" + task.text + "</li>";
-//         if (task.important === true && task.urgent === true){
-//           importantUrgent.append(text);
-//         }
-//         else if (task.important === true && task.urgent === false) {
-//           importantNotUrgent.append(text);
-//         }
-//         else if (task.important === false && task.urgent === true) {
-//           notImportantUrgent.append(text);
-//         }
-//         else if (task.important === false && task.urgent === false) {
-//           notImportantNotUrgent.append(text);
-//         }
-//       });
-//     },
-//     error: function() {
-//       alert("in the error block :( ")
-//       // do something else
-//     }
-//   });

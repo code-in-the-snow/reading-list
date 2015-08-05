@@ -17,5 +17,25 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
+  redirect '/books'
+end
+
+get '/books' do
   erb :index
+end
+
+get '/books.json' do
+  books = Book.all
+
+  json({
+    books: books
+    })
+end
+
+post '/books' do
+  Book.create(title: params["title"],
+              author: params["author"],
+              fiction:
+              mystery:
+              completed: params["completed"]).to_json
 end

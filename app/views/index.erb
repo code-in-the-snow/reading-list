@@ -1,20 +1,23 @@
-<form id="book-form" action="/books" method="POST">
-  Latest Book:
-  <input id="book-text-field" name="book-text">
-  <br>
-  Author:
-  <input id="author-text-field" name="author-text">
-  <br>
-  Date Completed:
-  <input value="mm/dd/yyyy" id="date-text-field" name="date-text">
-  <p>
-    <span class="instructions">Check all that apply:</span><br>
-    <input type="checkbox" name="mystery" value="true">Mystery
-    <input type="checkbox" name="fiction" value="true">Fiction
-    <input type="checkbox" name="fiction" value="false">Non-fiction
-  </p>
-  <button id="new-book-button">Submit Book</button>
-</form>
+<p class="slider"><button id="get-form">I finished another book!</button></p>
+<div class="form-container">
+  <form id="book-form" action="/books" method="POST">
+    Latest Book:
+    <input id="title-text-field" name="title">
+    <br>
+    Author:
+    <input id="author-text-field" name="author">
+    <br>
+    Date Completed:
+    <input value="mm/dd/yyyy" id="completed-text-field" name="completed">
+    <p>
+      <span class="instructions">Check all that apply:</span><br>
+      <input type="checkbox" id='mystery' name="mystery" value="true">Mystery
+      <input type="checkbox" id='fiction' name="fiction" value="true">Fiction
+      <input type="checkbox" id='nonfiction' name="fiction" value="false">Non-fiction
+    </p>
+    <button id="new-book-button">Submit Book</button>
+  </form>
+</div>
 
 <div class="main-container">
   <div class="left">

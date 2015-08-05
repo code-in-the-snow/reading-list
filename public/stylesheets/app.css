@@ -1,12 +1,22 @@
+body {
+  width: 85%;
+ }
+
 .main-container {
   text-align: center;
-  }
+ }
+.slider {
+  text-align: center;
+ }
+.form-container {
+  text-align: center;
+ }
 
-  .left, .middle, .right {
+.left, .middle, .right {
   width: 30%;
   float: left;
-}
+ }
 
- li {
+li {
    list-style: none;
  }
