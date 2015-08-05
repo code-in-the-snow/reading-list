@@ -1,22 +1,25 @@
 <p class="slider"><button id="get-form">I finished another book!</button></p>
 <div class="form-container">
   <form id="book-form" action="/books" method="POST">
-    Latest Book:
-    <input id="title-text-field" name="title">
-    <br>
-    Author:
-    <input id="author-text-field" name="author">
-    <br>
-    Date Completed:
-    <input value="mm/dd/yyyy" id="completed-text-field" name="completed">
     <p>
-      <input type="radio" id='fiction' name="genre" value="fiction">Fiction
-      <input type="radio" id='nonfiction' name="genre" value="nonfiction">Non-fiction
+      Latest Book:
+      <input id="title-text-field" name="title">
     </p>
     <p>
-      <input type="radio" name="genre" value="mystery">Mystery
-      <input type="radio" name="genre" value="everything-else">Everything Else
-      <br>
+      Author:
+      <input id="author-text-field" name="author">
+    </p>
+    <p>
+      Date Completed:
+      <input placeholder="mm/dd/yyyy" id="completed-text-field" name="completed">
+    </p>
+    <p>
+      <input type="radio" name="fiction" value="true">Fiction
+      <input type="radio" name="fiction" value="false">Non-fiction
+    </p>
+    <p>
+      <input type="radio" name="mystery" value="true">Mystery
+      <input type="radio" name="mystery" value="false">Everything Else
     </p>
     <button id="new-book-button">Submit Book</button>
   </form>

@@ -33,8 +33,9 @@ get '/books.json' do
 end
 
 post '/books' do
-  byebug
   Book.create(title: params["title"],
               author: params["author"],
-              completed: params["completed"]).to_json
+              completed: params["completed"],
+              fiction: params["fiction"],
+              mystery: params["mystery"]).to_json
 end

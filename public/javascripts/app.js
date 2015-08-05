@@ -38,13 +38,8 @@ $(document).ready(function() {
     var newTitle = $('#title-text-field').val();
     var newAuthor = $('#author-text-field').val();
     var newDate = $('#completed-text-field').val();
-    var mystery, fiction;
-     if ($("#mystery").checked === true) {
-       mystery = true;
-     }
-     if ($("#nonfiction").checked === true) {
-       fiction = false;
-     }
+    var mystery = $("input[name='mystery']:checked").val();
+    var fiction = $("input[name='fiction']:checked").val();
 
     var nonFiction = $('.nonfiction');
     var mysteryFiction = $('.mystery-fiction');
@@ -69,8 +64,9 @@ $(document).ready(function() {
         } else {
           nonFiction.append(text);
         }
+        document.getElementById("book-form").reset();
       },
-      ereror: function() {
+      error: function() {
         alert("Oops, something went wrong?!?");
       }
     });
