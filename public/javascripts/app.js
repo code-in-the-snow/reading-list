@@ -37,12 +37,12 @@ $(document).ready(function() {
 
     var newTitle = $('#title-text-field').val();
     var newAuthor = $('#author-text-field').val();
-    var newDate = $('#title-text-field').val();
+    var newDate = $('#completed-text-field').val();
     var mystery, fiction;
-     if ($("#mystery").checked == true) {
+     if ($("#mystery").checked === true) {
        mystery = true;
      }
-     if ($("#nonfiction").checked == true) {
+     if ($("#nonfiction").checked === true) {
        fiction = false;
      }
 

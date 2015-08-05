@@ -10,10 +10,13 @@
     Date Completed:
     <input value="mm/dd/yyyy" id="completed-text-field" name="completed">
     <p>
-      <span class="instructions">Check all that apply:</span><br>
-      <input type="checkbox" id='mystery' name="mystery" value="true">Mystery
-      <input type="checkbox" id='fiction' name="fiction" value="true">Fiction
-      <input type="checkbox" id='nonfiction' name="fiction" value="false">Non-fiction
+      <input type="radio" id='fiction' name="genre" value="fiction">Fiction
+      <input type="radio" id='nonfiction' name="genre" value="nonfiction">Non-fiction
+    </p>
+    <p>
+      <input type="radio" name="genre" value="mystery">Mystery
+      <input type="radio" name="genre" value="everything-else">Everything Else
+      <br>
     </p>
     <button id="new-book-button">Submit Book</button>
   </form>
