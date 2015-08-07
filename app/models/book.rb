@@ -8,10 +8,4 @@ class Book < ActiveRecord::Base
       where(mystery: true)
     end
   end
-
-  class << self
-    def fiction
-      where(fiction: true)
-    end
-  end
 end
