@@ -1,35 +1,43 @@
 body {
   width: 85%;
+  height: 100%;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  background: #FFFF73;
-  background-image: url("https://www.google.com/search?q=library+background+images&es_sm=119&tbm=isch&imgil=jPxhN-bne6lxhM%253A%253BDkrf6LgSSBQgpM%253Bhttp%25253A%25252F%25252Fhdwallpaperslovely.com%25252Flibrary-background-images.html&source=iu&pf=m&fir=jPxhN-bne6lxhM%253A%252CDkrf6LgSSBQgpM%252C_&usg=__zIn4NSlKLspsjlVBQF2CMA-kBCM%3D");
-  background-repeat: none;
+  background-image: url(./images/single-bookshelf.jpg);
   background-size: 100%;
  }
-
 #get-form {
    display: block;
    height: 60px;
    width: 200px;
    margin: auto;
-   background: #FFEF00;
+   background: #336600;
    border: 2px solid;
    text-align: center;
    font: bold .9em/60px "Comic Sans MS", cursive, sans-serif;
    border-radius: 25px;
-   box-shadow:  0 4px 0 #BFB630;
+   box-shadow:  0 4px 0 #003300;
+ }
+ #book-form input, form button {
+   background-color: #E5D8BD;
  }
 
 .main-container {
   text-align: center;
  }
+::-webkit-input-placeholder { text-align: center; }
+::-moz-placeholder { text-align: center; } /* firefox 19+ */
+:-ms-input-placeholder { text-align: center; } /* ie */
+input:-moz-placeholder { text-align: center; }
+
 .form-container {
+  margin-top: 1em;
   text-align: center;
  }
 
 .column {
   width: 33%;
   float: left;
+  font-size: large;
  }
 
 li {
