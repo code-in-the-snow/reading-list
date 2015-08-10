@@ -1,15 +1,29 @@
 require 'spec_helper'
 
 feature 'User views index page' do
-  scenario 'user sees last title entered' do
+  scenario 'user sees all titles in database', js: true do
 
-    test_book = Book.new(title: 'Green Eggs and Ham',
+    test_f = Book.create(title: 'Green Eggs and Ham',
                          author: 'Dr. Seuss',
                          fiction: true,
                          mystery: false,
-                         completed: 'May 2, 2011')
+                         completed: "05/02/2011")
+    test_nf = Book.create(title: 'Learn Python the Hard Way',
+                          author: 'Zed Shaw',
+                          fiction: false,
+                          mystery: false,
+                          completed: "10/01/2014")
+    test_nf = Book.create(title: 'Delete All Suspects',
+                          author: 'Donna Andrews',
+                          fiction: true,
+                          mystery: true,
+                          completed: "12/17/2005")
+
     visit '/'
+    sleep(6.0)
 
     expect(page).to have_content "Green Eggs and Ham"
+    expect(page).to have_content "Learn Python the Hard Way"
+    expect(page).to have_content "Deleted All Suspects"
   end
 end

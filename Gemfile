@@ -14,9 +14,7 @@ group :test, :development do
   gem 'rspec'
   gem 'web-console', '~> 2.0'
   gem 'launchy'
-  gem 'shoulda-matchers' require: false
   gem 'poltergeist'
   gem 'database_cleaner'
-  gem 'valid-attribute'
-  gem 'factory-girl'
+  gem 'valid_attribute'
 end

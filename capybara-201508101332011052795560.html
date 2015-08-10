@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read It!</title>
+    <link rel="stylesheet" href="/stylesheets/app.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="get-form">I finished another book!</button>
+<div class="form-container">
+  <form id="book-form" action="/books" method="POST" style="display: none;">
+    <p>
+      Latest Book:
+      <input id="title-text-field" name="title">
+    </p>
+    <p>
+      Author:
+      <input id="author-text-field" name="author">
+    </p>
+    <p>
+      Date Completed:
+      <input placeholder="mm/dd/yyyy" id="completed-text-field" name="completed">
+    </p>
+    <p>
+      <input type="radio" name="fiction" value="true">Fiction
+      <input type="radio" name="fiction" value="false">Non-fiction
+    </p>
+    <p>
+      <input type="radio" name="mystery" value="true">Mystery
+      <input type="radio" name="mystery" value="false">Everything Else
+    </p>
+    <button id="new-book-button">Submit Book</button>
+  </form>
+</div>
+
+<div class="main-container">
+  <div class="column">
+    <h2>Non-fiction</h2>
+    <div class="nonfiction"></div>
+  </div>
+
+  <div class="column">
+    <h2>Mystery Fiction</h2>
+    <div class="mystery-fiction"></div>
+  </div>
+
+  <div class="column">
+    <h2>Other Fiction</h2>
+    <div class="other-fiction"></div>
+  </div>
+</div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/javascripts/app.js"></script>
+   </div>
+  
+
+</body></html>
