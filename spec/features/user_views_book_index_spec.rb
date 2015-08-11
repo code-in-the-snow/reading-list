@@ -28,6 +28,16 @@ feature 'User views index page' do
   end
 end
 
+feature 'hidden from becomes visible', js: true do
+  scenario "User clicks 'I finished another book'" do
+    visit '/'
+    click_button "I finished another book!"
+    sleep(1.0)
+
+    expect(page).to have_content "Latest Book"
+  end
+end
+
 feature 'User adds a book to list' do
   scenario 'users adds a mystery', js: true do
     visit '/'
