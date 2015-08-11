@@ -11,15 +11,23 @@
     </p>
     <p>
       Date Completed:
-      <input placeholder="mm/dd/yyyy" id="completed-text-field" name="completed">
+      <input placeholder="dd/mm/yyyy" id="completed-text-field" name="completed">
     </p>
     <p>
-      <input type="radio" name="fiction" value="true">Fiction
-      <input type="radio" name="fiction" value="false">Non-fiction
+      <label for="fiction">
+        <input type="radio" id="fiction" name="fiction" value="true">Fiction
+      </label>
+      <label for="nonfiction">
+        <input type="radio" id="nonfiction" name="fiction" value="false">Non-fiction
+      </label>
     </p>
     <p>
-      <input type="radio" name="mystery" value="true">Mystery
-      <input type="radio" name="mystery" value="false">Everything Else
+      <label for="mystery">
+        <input type="radio" id="mystery" name="mystery" value="true">Mystery
+      </label>
+      <label for="other">
+        <input type="radio" id="other" name="mystery" value="false">Everything Else
+      </label>
     </p>
     <button id="new-book-button">Submit Book</button>
   </form>

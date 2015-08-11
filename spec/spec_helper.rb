@@ -6,7 +6,7 @@ require "database_cleaner"
 require 'valid_attribute'
 require 'launchy'
 
-require_relative '../server'
+require_relative '../server.rb'
 
 set :environment, :test
 set :database, :test

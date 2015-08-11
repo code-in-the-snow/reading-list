@@ -3,9 +3,4 @@ class Book < ActiveRecord::Base
   validates :author, presence: true
   validates :completed, presence: true
 
-  class << self
-    def mystery
-      where(mystery: true)
-    end
-  end
 end

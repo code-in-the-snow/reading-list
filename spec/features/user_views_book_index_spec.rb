@@ -17,13 +17,29 @@ feature 'User views index page' do
                           author: 'Donna Andrews',
                           fiction: true,
                           mystery: true,
-                          completed: "12/17/2005")
+                          completed: "17/12/2005")
 
     visit '/'
     sleep(6.0)
 
     expect(page).to have_content "Green Eggs and Ham"
     expect(page).to have_content "Learn Python the Hard Way"
-    expect(page).to have_content "Deleted All Suspects"
+    expect(page).to have_content "Delete All Suspects"
+  end
+end
+
+feature 'User adds a book to list' do
+  scenario 'users adds a mystery', js: true do
+    visit '/'
+    click_button "I finished another book!"
+    fill_in "title", with: "Bellman and Black"
+    fill_in "author", with: "Diane Setterfield"
+    fill_in "completed", with: "11/08/2015"
+    choose "nonfiction"
+    choose "other"
+
+    click_button "Submit"
+    sleep(5.0)
+    expect(page).to have_content "Bellman and Black"
   end
 end
